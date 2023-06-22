@@ -1,11 +1,32 @@
 import { styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-export const Container = styled("div")({});
+export const Container = styled("div")({
+  color: "#fff",
+  opacity: 0,
+  transition: "all 0.5s ease",
+
+  "&.fade-in": {
+    opacity: 1,
+    transform: "translateX(0%)",
+  },
+
+  "&.fade-out": {
+    opacity: 0,
+    transform: "translateY(-30%)",
+  },
+});
 
 export const Img = styled("img")({
   width: "100%",
   maxWidth: 50,
+  transition: "all 0.5s ease",
+  cursor: "pointer",
+
+  "&:hover": {
+    borderRadius: "30%",
+    background: "rgba(255,255,255,0.25)",
+  },
 });
 
 export const FirstBlock = styled("div")({
@@ -26,13 +47,12 @@ export const Li = styled("li")({
 
 export const Link = styled(NavLink)({
   textDecoration: "none",
-  color: "white",
   paddingLeft: 20,
-  fontSize: 16,
-  transition: ".4s",
+  fontSize: 18,
+  transition: ".5s",
 
   "&:hover": {
-    transition: ".4s",
-    color: "#ff3232",
+    transition: ".5s",
+    color: "#1e79ff",
   },
 });
