@@ -37,7 +37,7 @@ export const Home = () => {
       </Wrapper>
       <div style={{ marginLeft: "25px" }}>
         <Tag>{"<button>"}</Tag>
-        <Button children={"Click me!"} />
+        <Button children={"Contact me!"} />
         <Tag>{"</button>"}</Tag>
       </div>
       <div style={{ marginTop: "24px" }}>

@@ -7,8 +7,13 @@ type TButton = {
 
 export const Button: FC<TButton> = ({ children }) => {
   return (
-    <button className="glow-on-hover" type="button">
+    <a
+      className="glow-on-hover"
+      type="button"
+      href="https://www.linkedin.com/in/oleh-bilostotskyi-a535a921b/"
+      target="_blank"
+    >
       {children}
-    </button>
+    </a>
   );
 };

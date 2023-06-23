@@ -1,5 +1,6 @@
+import { Text, Title, Wrapper } from "./style";
 import { useEffect, useState } from "react";
-import { Container, Text, Title, Wrapper } from "../home/style";
+import { Container } from "../home/style";
 
 export const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false);

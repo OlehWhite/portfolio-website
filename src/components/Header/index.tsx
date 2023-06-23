@@ -1,11 +1,13 @@
 import { Container, FirstBlock, Img, Ul, Li, Link } from "./style";
 import Logo from "../../assets/icons/logo.png";
-import { paths } from "../../pages/paths";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { paths } from "../../pages/paths";
 
 export const Header = () => {
   const [activeButton, setActiveButton] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -18,6 +20,7 @@ export const Header = () => {
   };
 
   const reloadPage = () => {
+    navigate("/");
     window.location.reload();
   };
 
