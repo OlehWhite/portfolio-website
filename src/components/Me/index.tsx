@@ -1,7 +1,7 @@
 import { CONTENTFUL_KEYS } from "../../pages/contentfulKeys";
 import { Aside, Img, ImgLink, Ul, Li, Link } from "./style";
-import IMGMe from "../../assets/icons/me.jpg";
 import { useLocation } from "react-router-dom";
+import IMGMe from "../../assets/icons/me.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -16,8 +16,6 @@ export const Me = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [contacts, setContacts] = useState<TContact[]>([]);
   const location = useLocation();
-
-  console.log(location.pathname);
 
   useEffect(() => {
     setTimeout(() => {
