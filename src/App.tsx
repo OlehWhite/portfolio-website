@@ -5,6 +5,8 @@ import React from "react";
 import { About } from "./pages/about";
 import { Projects } from "./pages/projects";
 import { Educations } from "./pages/educations";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   const element = useRoutes([

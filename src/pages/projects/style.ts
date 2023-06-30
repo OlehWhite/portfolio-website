@@ -11,9 +11,3 @@ export const Wrapper = styled("div")({
 export const Title = styled("h1")({
   fontSize: 46,
 });
-
-export const Text = styled("p")({
-  marginTop: 24,
-  fontSize: 26,
-  color: "#ffffff",
-});

@@ -13,7 +13,7 @@ type TContact = {
 const ID_CONTENT = "contactInformations";
 
 export const Me = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [contacts, setContacts] = useState<TContact[]>([]);
   const location = useLocation();
 
@@ -62,11 +62,7 @@ export const Me = () => {
   }, []);
 
   return (
-    <Aside
-      className={
-        isLoaded && location.pathname !== "/projects" ? "fade-in" : "fade-out"
-      }
-    >
+    <Aside className={isLoaded ? "fade-in" : "fade-out"}>
       <div>
         <Img src={IMGMe} alt="Bilostotskyi Oleh" title="Bilostotskyi Oleh" />
       </div>
