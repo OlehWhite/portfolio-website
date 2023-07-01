@@ -1,4 +1,4 @@
-import { Title, Wrapper } from "./style";
+import { Wrapper } from "./style";
 import { useEffect, useState } from "react";
 import { Container } from "../home/style";
 import { Project } from "../../components/Project";
@@ -15,7 +15,6 @@ export const Projects = () => {
 
   return (
     <Container className={isLoaded ? "fade-in" : "fade-out"}>
-      <Title>Projects</Title>
       <Wrapper>
         <Project
           title="Positive Reset Services"

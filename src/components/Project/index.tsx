@@ -10,8 +10,8 @@ import {
   Box,
   StyledSlider,
 } from "./style";
-import IMGLeft from "../../assets/icons/left-arrow.png";
 import IMGRight from "../../assets/icons/right-arrow.png";
+import IMGLeft from "../../assets/icons/left-arrow.png";
 import Slider from "react-slick";
 
 interface ImgProject {

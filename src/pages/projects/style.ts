@@ -5,9 +5,4 @@ export const Wrapper = styled("div")({
   width: "100%",
   maxWidth: 800,
   height: 400,
-  padding: 24,
-});
-
-export const Title = styled("h1")({
-  fontSize: 46,
 });

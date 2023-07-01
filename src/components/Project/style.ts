@@ -11,11 +11,15 @@ export const Wrapper = styled("div")({
 export const Box = styled("div")({});
 
 export const Title = styled("h2")({
-  color: "white",
+  color: "#1e79ff",
+  marginBottom: 24,
 });
 
 export const Text = styled("h2")({
   color: "white",
+  fontSize: 16,
+  marginBottom: 24,
+  marginLeft: 24,
 });
 
 export const Image = styled("img")({
