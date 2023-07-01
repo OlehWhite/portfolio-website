@@ -1,18 +1,13 @@
 import { styled } from "@mui/material";
 import Slider from "react-slick";
 
-export const Container = styled("div")({});
-
-export const Wrapper = styled("div")({
-  display: "flex",
-  alignItems: "center",
+export const Container = styled("div")({
+  marginBottom: 24,
 });
 
-export const Box = styled("div")({});
-
-export const Title = styled("h2")({
-  color: "#1e79ff",
-  marginBottom: 24,
+export const BoxButton = styled("div")({
+  display: "flex",
+  justifyContent: "center",
 });
 
 export const Text = styled("h2")({
@@ -24,13 +19,42 @@ export const Text = styled("h2")({
 
 export const Image = styled("img")({
   width: "100%",
+  maxWidth: 800,
 });
 
-export const RightButton = styled("img")({});
+export const Wrapper = styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  width: 420,
+  height: 25,
+  cursor: "pointer",
+  transition: "all 0.5s ease",
+  background: "rgba(88,88,88,0.38)",
 
-export const LeftButton = styled(RightButton)({});
+  "&:hover": {
+    background: "rgba(255,255,255,0.32)",
+  },
+});
+
+export const Button = styled("img")({
+  width: 20,
+});
 
 export const StyledSlider = styled(Slider)({
-  maxWidth: 695,
+  width: "100%",
   margin: "0 auto",
+});
+
+export const Link = styled("a")({
+  display: "inline-block",
+  textDecoration: "none",
+  color: "#1e79ff",
+  marginBottom: 24,
+  fontSize: 26,
+  fontWeight: "bold",
+  transition: "all 0.5s ease",
+
+  "&:hover": {
+    color: "rgba(255,255,255,0.59)",
+  },
 });

@@ -27,25 +27,3 @@ code {
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
-.fade-enter {
-  opacity: 0;
-  transform: translateY(30%);
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease;
-}
-
-.fade-exit {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transform: translateY(30%);
-  transition: all 0.5s ease;
-}

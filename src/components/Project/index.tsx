@@ -1,13 +1,12 @@
 import {
-  Container,
-  Wrapper,
-  Title,
   Text,
   Image,
-  LeftButton,
-  RightButton,
-  Box,
+  Button,
   StyledSlider,
+  Wrapper,
+  BoxButton,
+  Container,
+  Link,
 } from "./style";
 import IMGRight from "../../assets/icons/right-arrow.png";
 import IMGLeft from "../../assets/icons/left-arrow.png";
@@ -23,6 +22,7 @@ type TProject = {
   images: ImgProject[];
   title: string;
   text: string;
+  link: string;
 };
 
 const settings = {
@@ -35,7 +35,7 @@ const settings = {
   useTransform: false,
 };
 
-export const Project: FC<TProject> = ({ images, title, text }) => {
+export const Project: FC<TProject> = ({ images, title, text, link }) => {
   const ref = useRef<Slider | null>(null);
 
   useEffect(() => {
@@ -58,29 +58,27 @@ export const Project: FC<TProject> = ({ images, title, text }) => {
 
   return (
     <Container>
-      <Title>{title}</Title>
+      <Link href={link} target="_blank">
+        {title}
+      </Link>
       <Text>{text}</Text>
-      <Wrapper>
-        <LeftButton
-          src={IMGLeft}
-          alt="Left Button"
-          title="Left Button"
-          onClick={onPrev}
-        />
+      <div>
         <StyledSlider ref={ref} {...settings}>
-          {images.map(({ title, img }, index) => (
-            <Box key={index}>
+          {images.map(({ title, img }) => (
+            <div key={title}>
               <Image src={img} title={title} alt={title} />
-            </Box>
+            </div>
           ))}
         </StyledSlider>
-        <RightButton
-          src={IMGRight}
-          alt="Right Button"
-          title="Right Button"
-          onClick={onNext}
-        />
-      </Wrapper>
+        <BoxButton>
+          <Wrapper onClick={onPrev}>
+            <Button src={IMGLeft} alt="Left Button" title="Left Button" />
+          </Wrapper>
+          <Wrapper onClick={onNext}>
+            <Button src={IMGRight} alt="Right Button" title="Right Button" />
+          </Wrapper>
+        </BoxButton>
+      </div>
     </Container>
   );
 };

@@ -23,7 +23,7 @@ export const Content = styled("div")({
 });
 
 export const Overlay = styled("div")({
-  position: "absolute",
+  position: "fixed",
   top: 0,
   left: 0,
   width: "100%",

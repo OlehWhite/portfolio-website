@@ -10,8 +10,7 @@ export const Button: FC<TButton> = ({ children }) => {
     <a
       className="glow-on-hover"
       type="button"
-      href="https://www.linkedin.com/in/oleh-bilostotskyi-a535a921b/"
-      target="_blank"
+      href="mailto:oleg220298d@gmail.com"
     >
       {children}
     </a>
