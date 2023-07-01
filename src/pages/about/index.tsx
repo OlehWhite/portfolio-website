@@ -1,4 +1,4 @@
-import { B, Container } from "../../pages/home/style";
+import { B, Container } from "../home/style";
 import { Wrapper, Title, Text } from "./style";
 import { useEffect, useState } from "react";
 
