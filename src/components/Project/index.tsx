@@ -1,4 +1,3 @@
-import { FC, useEffect, useRef } from "react";
 import {
   Container,
   Wrapper,
@@ -12,6 +11,7 @@ import {
 } from "./style";
 import IMGRight from "../../assets/icons/right-arrow.png";
 import IMGLeft from "../../assets/icons/left-arrow.png";
+import { FC, useEffect, useRef } from "react";
 import Slider from "react-slick";
 
 interface ImgProject {
@@ -68,8 +68,8 @@ export const Project: FC<TProject> = ({ images, title, text }) => {
           onClick={onPrev}
         />
         <StyledSlider ref={ref} {...settings}>
-          {images.map(({ title, img }) => (
-            <Box key={title}>
+          {images.map(({ title, img }, index) => (
+            <Box key={index}>
               <Image src={img} title={title} alt={title} />
             </Box>
           ))}

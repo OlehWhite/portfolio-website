@@ -1,23 +1,19 @@
 import { Container, FirstBlock, Img, Ul, Li, Link } from "./style";
 import Logo from "../../assets/icons/logo.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { paths } from "../../pages/paths";
 
 export const Header = () => {
-  const [activeButton, setActiveButton] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
     }, 200);
   }, []);
-
-  const switchActiveButton = (index: number) => {
-    setActiveButton(index);
-  };
 
   const reloadPage = () => {
     navigate("/");
@@ -33,12 +29,13 @@ export const Header = () => {
         <div>
           <nav>
             <Ul>
-              {paths.map(({ path, name }, index) => (
+              {paths.map(({ path, name }) => (
                 <Li key={name}>
                   <Link
                     to={path}
-                    onClick={() => switchActiveButton(index)}
-                    className={activeButton === index ? "active" : "no-active"}
+                    className={
+                      location.pathname === path ? "active" : "no-active"
+                    }
                   >
                     {name}
                   </Link>
