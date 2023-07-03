@@ -27,8 +27,6 @@ export const Title = styled("a")({
   color: "#fff",
   fontWeight: 600,
   fontSize: 24,
-  marginLeft: 15,
-  marginTop: 10,
   transition: "all 0.5s ease",
 
   "&:hover": {
@@ -39,7 +37,7 @@ export const Title = styled("a")({
 export const Text = styled("p")({
   fontSize: 20,
   color: "BCBCBCFF",
-  marginLeft: 15,
+  margin: 15,
 });
 
 export const Tag = styled("span")({
