@@ -1,8 +1,9 @@
-import { Container, FirstBlock, Img, Ul, Li, Link } from "./style";
-import Logo from "../../assets/icons/logo.png";
+import { Container, FirstBlock, Img, Ul, Li, Link, Nav } from "./style";
 import { useLocation, useNavigate } from "react-router-dom";
+import Logo from "../../assets/icons/logo.png";
 import { useEffect, useState } from "react";
 import { paths } from "../../pages/paths";
+import BurgerMenu from "../BurgerMenu";
 
 export const Header = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,7 +28,7 @@ export const Header = () => {
           <Img src={Logo} alt="Logo" title="Logo" onClick={reloadPage} />
         </div>
         <div>
-          <nav>
+          <Nav>
             <Ul>
               {paths.map(({ path, name }) => (
                 <Li key={name}>
@@ -42,7 +43,8 @@ export const Header = () => {
                 </Li>
               ))}
             </Ul>
-          </nav>
+          </Nav>
+          <BurgerMenu />
         </div>
       </FirstBlock>
     </Container>

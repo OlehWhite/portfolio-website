@@ -2,8 +2,17 @@ import { styled } from "@mui/material";
 
 export const Container = styled("div")({
   width: "100%",
-  height: "100vh",
   overflow: "hidden",
+});
+
+export const Block = styled("div")({
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "0 10px",
+
+  "@media (max-width: 1180px)": {
+    justifyContent: "center",
+  },
 });
 
 export const Video = styled("video")({
@@ -14,12 +23,9 @@ export const Video = styled("video")({
 });
 
 export const Content = styled("div")({
-  position: "absolute",
+  margin: "0 auto",
   width: "100%",
   maxWidth: 1300,
-  top: 0,
-  left: "50%",
-  transform: "translateX(-50%)",
 });
 
 export const Overlay = styled("div")({

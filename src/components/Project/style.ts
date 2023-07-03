@@ -23,6 +23,10 @@ export const Image = styled("img")({
   width: "100%",
   maxWidth: 800,
   height: 453,
+
+  "@media (max-width: 779px)": {
+    height: "auto",
+  },
 });
 
 export const Wrapper = styled("div")({

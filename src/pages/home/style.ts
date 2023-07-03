@@ -27,6 +27,13 @@ export const Wrapper = styled("div")({
 export const Title = styled("h1")({
   fontSize: 56,
   marginLeft: 15,
+
+  "@media (max-width: 779px)": {
+    fontSize: 34,
+  },
+  "@media (max-width: 469px)": {
+    fontSize: 24,
+  },
 });
 
 export const Text = styled("p")({

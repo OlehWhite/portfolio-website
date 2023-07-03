@@ -1,4 +1,4 @@
-import { Video, Container, Content, Overlay } from "./style";
+import { Video, Container, Content, Overlay, Block } from "./style";
 import VideoBg from "../../assets/videos/video-bg.mp4";
 import { Outlet } from "react-router";
 import { Header } from "../Header";
@@ -11,10 +11,10 @@ export const Layout = () => {
       <Overlay />
       <Content>
         <Header />
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Block>
           <Outlet />
           <Me />
-        </div>
+        </Block>
       </Content>
     </Container>
   );

@@ -5,6 +5,7 @@ export const Container = styled("div")({
   color: "#fff",
   opacity: 0,
   transition: "all 0.5s ease",
+  padding: "0 10px",
 
   "&.fade-in": {
     opacity: 1,
@@ -54,5 +55,11 @@ export const Link = styled(NavLink)({
   "&:hover": {
     transition: ".5s",
     color: "#1e79ff",
+  },
+});
+
+export const Nav = styled("nav")({
+  "@media (max-width: 470px)": {
+    display: "none",
   },
 });

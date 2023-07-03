@@ -15,6 +15,10 @@ export const Aside = styled("aside")({
     opacity: 0,
     transform: "translateY(30%)",
   },
+
+  "@media (max-width: 1180px)": {
+    display: "none",
+  },
 });
 
 export const Img = styled("img")({
