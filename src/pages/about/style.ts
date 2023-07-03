@@ -1,21 +1,12 @@
 import { styled } from "@mui/material";
 
 export const Wrapper = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
   width: "100%",
-  maxWidth: 800,
-  height: 400,
-  padding: 24,
-});
-
-export const Title = styled("h1")({
-  fontSize: 46,
+  padding: "62px 24px",
 });
 
 export const Text = styled("p")({
   marginTop: 24,
-  fontSize: 26,
+  fontSize: 22,
   color: "#ffffff",
 });

@@ -16,27 +16,30 @@ export const Container = styled("main")({
 });
 
 export const Wrapper = styled("div")({
-  display: "flex",
-  alignItems: "center",
   width: "100%",
   maxWidth: 800,
   height: 400,
   padding: 24,
 });
 
-export const Title = styled("h1")({
-  fontSize: 56,
+export const Title = styled("a")({
+  textDecoration: "none",
+  color: "#fff",
+  fontWeight: 600,
+  fontSize: 24,
   marginLeft: 15,
+  marginTop: 10,
+  transition: "all 0.5s ease",
+
+  "&:hover": {
+    color: "rgba(255,255,255,0.59)",
+  },
 });
 
 export const Text = styled("p")({
   fontSize: 20,
-  color: "#666666",
+  color: "BCBCBCFF",
   marginLeft: 15,
-});
-
-export const B = styled("span")({
-  color: "#1e79ff",
 });
 
 export const Tag = styled("span")({
@@ -44,4 +47,19 @@ export const Tag = styled("span")({
   fontFamily: "Caveat, cursive",
   fontSize: 20,
   color: "silver",
+});
+
+export const Box = styled("div")({
+  marginTop: 24,
+  borderBottom: "1px solid #bcbcbc52",
+  paddingBottom: 24,
+});
+
+export const Time = styled("h2")({
+  fontSize: 20,
+});
+
+export const Block = styled("div")({
+  display: "flex",
+  justifyContent: "space-between",
 });

@@ -3,6 +3,8 @@ import Slider from "react-slick";
 
 export const Container = styled("div")({
   marginBottom: 24,
+  paddingBottom: 24,
+  borderBottom: "1px solid #bcbcbc52",
 });
 
 export const BoxButton = styled("div")({
