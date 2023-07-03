@@ -4,6 +4,7 @@ import { Container } from "../home/style";
 import { Project } from "../../components/Project";
 import { positiveResetServices } from "./prsImages";
 import { positiveReset } from "./prImages";
+import { meditPlus } from "./mpImages";
 
 export const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -28,6 +29,12 @@ export const Projects = () => {
           title="Positive Reset"
           text="New Jersey Mental Health Clinic offers psychotherapy; medication management, comprehensive assessment, diagnosis and treatment of a full range of behavioral disorders."
           images={positiveReset}
+        />
+        <Project
+          link="https://geekhub-electronic-clinic.vercel.app/"
+          title="MediPlus"
+          text="We provide the best. Polyclinic MediPlus. Advanced medical technologies, professionalism combined with timely service delivery and individual approach to each patient and situation - this is the philosophy of MediPlus"
+          images={meditPlus}
         />
       </Wrapper>
     </Container>

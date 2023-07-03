@@ -13,11 +13,6 @@ export const Container = styled("main")({
     opacity: 1,
     transform: "translateX(0%)",
   },
-
-  "&.fade-out": {
-    opacity: 0,
-    transform: "translateX(-30%)",
-  },
 });
 
 export const Wrapper = styled("div")({

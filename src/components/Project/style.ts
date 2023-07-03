@@ -20,6 +20,7 @@ export const Text = styled("h2")({
 export const Image = styled("img")({
   width: "100%",
   maxWidth: 800,
+  height: 453,
 });
 
 export const Wrapper = styled("div")({
