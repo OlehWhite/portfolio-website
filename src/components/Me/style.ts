@@ -17,7 +17,8 @@ export const Aside = styled("aside")({
   },
 
   "@media (max-width: 1180px)": {
-    display: "none",
+    display: "flex",
+    justifyContent: "center",
   },
 });
 
@@ -29,6 +30,7 @@ export const Img = styled("img")({
 
 export const Ul = styled("ul")({
   display: "flex",
+  flexWrap: "wrap",
   marginTop: 34,
 });
 
@@ -51,5 +53,11 @@ export const ImgLink = styled("img")({
     boxShadow: "0px 0px 20px 7px #ffffffa8",
     opacity: 1,
     transform: "translateY(14%)",
+  },
+});
+
+export const WrapperImg = styled("div")({
+  "@media (max-width: 1180px)": {
+    display: "none",
   },
 });

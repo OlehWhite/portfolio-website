@@ -1,6 +1,5 @@
 import { CONTENTFUL_KEYS } from "../../pages/contentfulKeys";
-import { Aside, Img, ImgLink, Ul, Li, Link } from "./style";
-import { useLocation } from "react-router-dom";
+import { Aside, Img, ImgLink, Ul, Li, Link, WrapperImg } from "./style";
 import IMGMe from "../../assets/icons/me.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -15,7 +14,6 @@ const ID_CONTENT = "contactInformations";
 export const Me = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [contacts, setContacts] = useState<TContact[]>([]);
-  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -63,9 +61,9 @@ export const Me = () => {
 
   return (
     <Aside className={isLoaded ? "fade-in" : "fade-out"}>
-      <div>
+      <WrapperImg>
         <Img src={IMGMe} alt="Bilostotskyi Oleh" title="Bilostotskyi Oleh" />
-      </div>
+      </WrapperImg>
       <div>
         <Ul>
           {contacts.map(({ img, link }, index) => (

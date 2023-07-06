@@ -11,7 +11,7 @@ export const Block = styled("div")({
   padding: "0 10px",
 
   "@media (max-width: 1180px)": {
-    justifyContent: "center",
+    display: "block",
   },
 });
 

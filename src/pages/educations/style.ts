@@ -8,6 +8,7 @@ export const Container = styled("main")({
   width: "100%",
   maxWidth: 800,
   marginTop: 24,
+  margin: "0 auto",
 
   "&.fade-in": {
     opacity: 1,

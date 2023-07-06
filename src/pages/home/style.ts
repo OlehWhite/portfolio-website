@@ -8,6 +8,7 @@ export const Container = styled("main")({
   width: "100%",
   maxWidth: 800,
   marginTop: 24,
+  margin: "0 auto",
 
   "&.fade-in": {
     opacity: 1,
@@ -18,9 +19,6 @@ export const Container = styled("main")({
 export const Wrapper = styled("div")({
   display: "flex",
   alignItems: "center",
-  width: "100%",
-  maxWidth: 800,
-  height: 400,
   padding: 24,
 });
 
